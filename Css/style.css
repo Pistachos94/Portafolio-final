@@ -12,13 +12,14 @@ body{
 .disflex{
     display:flex;
 }
+
 .relative{
     position: relative;
 }
 /*nav*/
 nav{
     text-align: right;
-    background-color: #FEF2F2;
+    background-color: #fef2f2;
     padding: 1rem 3rem;
 } 
 nav button{
@@ -40,8 +41,9 @@ nav ul{
     top: 100%;
     z-index: 999;
     padding: 1rem;
-    background-color: #FEF2F2;
+    background-color: #585656;
 }
+
 nav ul li{
     padding: 0.5rem 0;
 }
@@ -99,15 +101,15 @@ header{
     max-width: 300px;
 }
 .generalvector{
-    width: 60%;
-    border-radius: 100%;
+    width: 55%;
     height: 40%;
-    background-color: #286f6c;
     position: absolute;
-    left: 40%;
-    top: 14rem; 
+    left: 44%;
+    top: 15rem; 
 }
-
+.generalvector img{
+    width: 100%;
+}
 header h1{
     margin: 0;
     font-size: 50px;
@@ -139,12 +141,13 @@ h2 span{
 }
 /**HABIlidades*/
 .convectores{
-    width:33%;
-    height: 26%;
-    background-color: #286f6c;
+    width:8.3rem;
+    height: 10%;
     position: absolute;
-    border-radius: 100%;
-    left: -14%;
+    left: -3rem;
+}
+.convectores img{
+    width: 100%;
 }
 .decocircleorange{
     width: 20%;
@@ -175,28 +178,57 @@ h2 span{
     text-align: center;
 }
 /**experiencia*/
-.expe-cont{
-    justify-content: center;
+.row{
+    display: flex;
     flex-wrap: wrap;
 }
-.cajitas{
-    margin-bottom: 20px;
+.exp-container{
+    justify-content: center;
+    height: 8rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
 }
-.ilustrations{
+.cont-exps{
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  height: 8rem;
+  width: 10rem;
+  padding: 0.2rem;
+  margin: 0.3rem;
+  flex-wrap: wrap;
+}
+.cont-exps p{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.cont-exps img{
+    width: 100%;
+    height: 100%;
+}
+.cont-exps h3{
+    margin-bottom: 0;
+    padding: 0;
+    font-size: 1.5em;
+}
+.cont-exps p{
+    margin-bottom: 0;
+    font-weight: bold;
+}
+.cont-exps p span{
+    font-size: 0.7rem;
+}
+.excepcition{
+    justify-content: left;
+
+}
+.col-12{
     width:100%;
 }
-.cajitadecajita{
-    width: 100px;
-    height: 100px;
-    padding: 0.5rem;
-    margin-left:0.5rem;
-    text-align: left;
-}
-.cajitadecajita h3{
-    font-size: 26px;
-}
-.margin1{
-    margin-top: 25%;
+.col-4{
+    width: 33.33%;
 }
 aside{
     background-color: #286f6c;
@@ -208,9 +240,7 @@ aside{
     padding-right: 1.5rem;
     padding-bottom: 0rem;
     flex-wrap: wrap;
-}
-.col-12{
-    width:100%;
+
 }
 .contimg{
     height: 50%;
@@ -219,10 +249,13 @@ aside{
     top:-4rem;
     border: 1px solid white;
     border-radius: 0.5rem;
+    box-shadow: inset 0 -5px rgba(51, 48, 47, 0.479);
+
 }
 .imgport-cont{
     width: 100%;
     height: 100%;
+    
 }
 .imgport-cont img{
     width: 100%;
@@ -250,6 +283,7 @@ aside{
     padding: 2.2rem 2.2rem 0 2.2rem;
     width: 100%;
     background-color: white;
+    box-shadow: inset 0 -5px rgba(51, 48, 47, 0.479);
 }
 .imgport-cont2 img{
     width: 100%;
@@ -288,12 +322,12 @@ footer{
     padding: 0rem;
 }
 .vectorgray{
-    width: 60%;
-    border-radius: 100%;
-    height: 40%;
-    background-color: #adadad;
+    width: 65%;
     position: absolute;
     left: -26%;
+}
+.vectorgray img{
+    width:100%
 }
 .yupi{
     margin-top: 15vh;
@@ -345,8 +379,8 @@ footer{
         padding-top: 18.5rem;
     }
     .convectores{
-        left: -10.6%;
-        width: 31.5%;
+        left: -7.3%;
+        width: 33%;
         height: 55%;
         z-index: 0;
     }
@@ -365,6 +399,7 @@ footer{
     .subs{
         font-size: 40px;
     }
+    /*experiencia*/
     .portgeneralcont{    
         padding-left:0;
         padding-right: 5%;
@@ -372,6 +407,9 @@ footer{
     }
     .contimg{
         top:-6rem;
+    }
+    .col-m-4{
+        width: 33.33%;
     }
     .both{
         margin: 3rem;
@@ -401,14 +439,40 @@ footer{
         margin: 0 3rem 0 3rem;
     }
     .vectorgray{
-        width: 30%;
+        width: 25%;
         height: 50%;
         left: -8%;
+        margin-top: -4rem;
     }
-
+    /**layout*/
+}
+@media(min-width:1034px){
+    .convectores{
+        left: -7.3%;
+        width: 31.2%;
+        height: 55%;
+        z-index: 0;
+    }
+}
+@media(min-width:1240px){
+    .convectores{
+        left: -7.3%;
+        width: 31%;
+        height: 55%;
+        z-index: 0;
+    }
 }
 @media (min-width:1350px){
     .secciones-cont{
         justify-content: flex-end;
+    }
+}
+@media(min-width:1430px){
+    .generalvector{
+        width: 28%;
+        height: 40%;
+        position: absolute;
+       
+      
     }
 }
