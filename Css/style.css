@@ -335,6 +335,13 @@ footer{
     text-align: center;
     font-weight:bold;
 }
+@media (min-width:648px){
+    .generalvector{
+        width: 46%;
+        height: 40%;
+        position: absolute;
+    }
+}
 @media (min-width:768px){
     .body{
         font-size: 18px;
