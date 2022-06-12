@@ -20,7 +20,7 @@ body{
 nav{
     text-align: right;
     background-color: #fef2f2;
-    padding: 1rem 3rem;
+    padding: 1rem 0rem;
 } 
 nav button{
     width: 3.2rem;
@@ -58,51 +58,68 @@ nav a:hover{
 .hidden{
     display: none;
 }
-/*header*/
 header{
     padding: 1.5rem 1.5rem 0rem 1.5rem;
-    background-color: #FEF2F2;
-    box-sizing: border-box;
-    align-items: flex-end;
+    background-color:#fef2f2;
 }
-.grid{
+.title{
+    grid-area: title;
+}
+.imagen{
+    grid-area:imagen;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.grid-cont{
     display: grid;
-    grid-template-columns: 30% 60% 7%;
-    height: 100%;
-    
+    grid-template-rows: 9rem auto;
+    grid-template-columns: 5rem auto;
+    min-height: 100%;
+    grid-template-areas: 
+        "title title title"
+        "logos imagen imagen"
+        "logos imagen imagen"
+    ;
 }
-.text-hero{
-    grid-column-start: 1;
-    grid-column-end: -1;
-
+.title h1{
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
+}
+.logos{
+    grid-area:logos;
+}
+.logos-cont{
+    flex-wrap: wrap;
+    margin: 0 0 0 1rem;
 }
 .littecirc{
-    width: 4rem;
-    margin: 0.5rem 0 0.5rem 0;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 0rem 0 1.3rem 0rem;
     border-radius: 100%;
-    display:inline-block;
     border: 3px white solid;
     background-color: #f26440;
     border-radius: 3px solid white;
     box-sizing: border-box;
-    padding: 1rem;
-
+    padding: 0.4rem;
 }
-.littecirc img{
+.littlecirc img{
     width: 100%;
+    height: 100%;
 }
-.mujerimg{
-    justify-content: center;
-    align-items: flex-end;
-    font-size: 0;
+.mujercont{
+    width: 15rem;
+    height: 100%;
 }
 .mujercont img{
     width: 100%;
-    max-width: 300px;
+    height: 100%;
 }
 .generalvector{
-    width: 55%;
-    height: 40%;
+    width: 15rem;
+    height: 15rem;
     position: absolute;
     left: 44%;
     top: 15rem; 
@@ -110,11 +127,6 @@ header{
 .generalvector img{
     width: 100%;
 }
-header h1{
-    margin: 0;
-    font-size: 50px;
-}
-
 .colorgray{
     color: #adadad;
 }
@@ -232,6 +244,7 @@ h2 span{
 }
 aside{
     background-color: #286f6c;
+    margin-bottom: 5rem;
 }
 .portgeneralcont{
     margin-top: 3rem;
@@ -284,6 +297,7 @@ aside{
     width: 100%;
     background-color: white;
     box-shadow: inset 0 -5px rgba(51, 48, 47, 0.479);
+    top:1.3rem;
 }
 .imgport-cont2 img{
     width: 100%;
@@ -335,13 +349,7 @@ footer{
     text-align: center;
     font-weight:bold;
 }
-@media (min-width:648px){
-    .generalvector{
-        width: 46%;
-        height: 40%;
-        position: absolute;
-    }
-}
+
 @media (min-width:768px){
     .body{
         font-size: 18px;
@@ -363,27 +371,48 @@ footer{
     header{
         padding: 0 6% 0 6%;
     }
-    .grid{
-      grid-template-columns: 30% 50% 17%;
+    .title h1{
+        font-size: 80px;
+        margin-top: 6.3rem;
+        padding: 0;
     }
-    .text-hero{
-        box-sizing: border-box;
-        width: 20%;
-        height: 0.5rem;
+    .grid-cont{
+        display: grid;
+        grid-template-rows: 26rem 8rem auto ;
+        grid-template-columns: 22rem auto;
+        min-height: 100%;
+        grid-template-areas: 
+            "title imagen imagen"
+            "logos imagen imagen" 
+            "logos imagen imagen"
+        ;
+    }
+    .logos-cont{
+        justify-content:space-between;
+        margin-left: 0;
+    }
+    .imagen{
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .mujercont{
+        width: 22rem;
+        display: flex;
+        align-items: flex-end;
+    }
+    .mujercont img{
+        width: 100%;
+        height: 93%;
+    }
+    .littecirc{
+        width: 4.2rem;
+        height: 4.2rem;
     }
     .generalvector{
-        width: 32%;
-        height: 50%;
-        left: 50%;
-        top: 5rem;
-    }
-    .text-hero h1{
-        position: relative;
-        top: 5rem;
-        font-size: 60px;
-    }
-    .redes{
-        padding-top: 18.5rem;
+        width: 28%;
+        height: 15rem;
+        left: 60%;
+        top: 10rem;
     }
     .convectores{
         left: -7.3%;
@@ -474,12 +503,13 @@ footer{
         justify-content: flex-end;
     }
 }
-@media(min-width:1430px){
+@media(min-width:1600px){
     .generalvector{
-        width: 28%;
-        height: 40%;
-        position: absolute;
-       
-      
+        width: 450px;
+        
     }
+    .convectores{
+        width: 475px;
+    }
+
 }
